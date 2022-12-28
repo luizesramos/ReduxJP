@@ -18,6 +18,7 @@
 		EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF276295BC447000E96B7 /* AppReducer.swift */; };
 		EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF279295BC804000E96B7 /* AlbumsState.swift */; };
 		EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF27E295BCF71000E96B7 /* PhotosState.swift */; };
+		EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF280295BD00E000E96B7 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EB0CF276295BC447000E96B7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EB0CF279295BC804000E96B7 /* AlbumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsState.swift; sourceTree = "<group>"; };
 		EB0CF27E295BCF71000E96B7 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
+		EB0CF280295BD00E000E96B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,9 @@
 		EB0CF26C295BBFC8000E96B7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EB0CF27D295BCF68000E96B7 /* Photos */,
 				EB0CF26D295BBFD6000E96B7 /* Application */,
 				EB0CF278295BC7E8000E96B7 /* Albums */,
+				EB0CF27D295BCF68000E96B7 /* Photos */,
 				EB0CF275295BC131000E96B7 /* Todos */,
 				EB0CF270295BBFF6000E96B7 /* Users */,
 			);
@@ -148,6 +150,7 @@
 		EB0CF27C295BCE73000E96B7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF280295BD00E000E96B7 /* NetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */,
 				EB0CF25E295BBA92000E96B7 /* ContentView.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
