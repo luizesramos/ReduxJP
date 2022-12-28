@@ -10,6 +10,7 @@ import Foundation
 func appReducer(state: AppState, action: ReduxAction) -> AppState {
     var state = state
     
+    state.usersState = usersReducer(state: state.usersState, action: action)
     // Add reducers
     
     return state

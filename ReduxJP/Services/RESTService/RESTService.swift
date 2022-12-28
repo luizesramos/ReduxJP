@@ -21,9 +21,9 @@ final class RESTService: RESTServiceable {
         }
         
         do {
-            let response: [User] = try await network.perform(request: NetworkRequest(method: .get, url: url))
+            let users: UsersResponse = try await network.perform(request: NetworkRequest(method: .get, url: url))
             Log.restService.i("Success fetching users")
-            return .success(response)
+            return .success(users)
         } catch {
             Log.restService.e("Failed to fech users \(error)")
             return .failure(.badResponse)

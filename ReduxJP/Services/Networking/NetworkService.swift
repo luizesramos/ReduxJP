@@ -27,15 +27,19 @@ final class NetworkService: NetworkServiceable {
         let (data, response) = try await session.data(for: r)
         
         if let httpResponse = response as? HTTPURLResponse {
-            Log.network.d("\(httpResponse)")
             guard httpResponse.statusCode == 200 else {
+                Log.network.d("\(response)")
                 throw NetworkError.badStatus(httpResponse.statusCode)
             }
-        } else {
-            Log.network.d("\(response)")
         }
 
-        return try decoder.decode(T.self, from: data)
+        do {
+            Log.network.d("DATA: \(String(data: data, encoding: .utf8) ?? "NONE")")
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            Log.network.e("\(error)")
+            throw NetworkError.decodingError
+        }
     }
 }
 
@@ -45,7 +49,8 @@ private extension URLSessionConfiguration {
         config.timeoutIntervalForRequest = 5
         config.timeoutIntervalForResource = 15
         config.httpAdditionalHeaders = [
-            "Content-type": "application/json; charset=UTF-8"
+            "Content-type": "application/json; charset=UTF-8",
+            "Accept": "application/json; charset=UTF-8"
         ]
         return config
     }

@@ -12,10 +12,12 @@ struct ContentView: View {
     
     private struct Props {
         var users: [User] = .init()
+        var fetchUsers: () -> Void
     }
     
     private func map(userState: UsersState) -> Props {
-        Props(users: userState.users)
+        Props(users: userState.users,
+              fetchUsers: { store.dispatch(action: FetchUsers()) })
     }
     
     private var props: Props {
@@ -26,13 +28,24 @@ struct ContentView: View {
         NavigationStack {
             List(props.users, id: \.id) { item in
                 NavigationLink(value: item) {
-                    Text(item.name)
+                    VStack(alignment: .leading) {
+                        Text(item.name)
+                        Text(item.company.name)
+                    }
+                }
+                .navigationDestination(for: User.self) { item in
+                    Text(item.website)
                 }
             }
             .refreshable {
-                debugPrint("Refresh content")
+                Log.app.i("Refresh users")
+                props.fetchUsers()
             }
-            //.toolbar { toolbar }
+            .navigationTitle("Users")
+//            .toolbar { toolbar }
+        }
+        .onAppear {
+            
         }
     }
     
@@ -40,9 +53,9 @@ struct ContentView: View {
 //    var toolbar: some ToolbarContent {
 //        ToolbarItem {
 //            Button(action: {}) {
-//                Image(systemName: "arrow.clockwise.circle.fill")
+//                Image(systemName: "info.circle.fill")
 //                    .resizable()
-//                    .frame(width: 40, height: 40)
+//                    .frame(width: 30, height: 30)
 //            }
 //        }
 //    }
@@ -50,7 +63,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let usersState = UsersState(selectedUserID: nil, users: [
+        let usersState = UsersState(users: [
             Preview.user(1,"Arthur Mock"),
             Preview.user(2,"Beth Mock"),
             Preview.user(3,"Curtix Mock"),

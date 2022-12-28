@@ -37,6 +37,7 @@ struct NetworkRequest {
 
 enum NetworkError: Error {
     case badStatus(Int)
+    case decodingError
 }
 
 extension Log {

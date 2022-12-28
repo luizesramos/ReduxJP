@@ -9,7 +9,15 @@ import SwiftUI
 
 @main
 struct ReduxJPApp: App {
-    private let store: Store<AppState> = .init(state: AppState(), reducer: appReducer, midlewares: [])
+    private let restService: RESTServiceable
+    private let store: Store<AppState>
+
+    init () {
+        restService = RESTService(network: NetworkService())
+        self.store = .init(state: AppState(), reducer: appReducer, midlewares: [
+            restMiddleware(service: restService)
+        ])
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -17,4 +25,8 @@ struct ReduxJPApp: App {
                 .environmentObject(store)
         }
     }
+}
+
+extension Log {
+    static var app = Logger(context: "App")
 }

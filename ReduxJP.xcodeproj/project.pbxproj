@@ -25,6 +25,9 @@
 		EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */; };
 		EB0CF291295C9C1D000E96B7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF290295C9C1D000E96B7 /* Log.swift */; };
 		EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */; };
+		EB0CF295295CAAFB000E96B7 /* UsersReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */; };
+		EB0CF297295CAB42000E96B7 /* UsersActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF296295CAB42000E96B7 /* UsersActions.swift */; };
+		EB0CF299295CAD44000E96B7 /* RESTMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,10 @@
 		EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelper.swift; sourceTree = "<group>"; };
 		EB0CF290295C9C1D000E96B7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceable.swift; sourceTree = "<group>"; };
+		EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersReducer.swift; sourceTree = "<group>"; };
+		EB0CF296295CAB42000E96B7 /* UsersActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersActions.swift; sourceTree = "<group>"; };
+		EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTMiddleware.swift; sourceTree = "<group>"; };
+		EB0CF29A295CAFDA000E96B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +86,7 @@
 		EB0CF25A295BBA92000E96B7 /* ReduxJP */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF29A295CAFDA000E96B7 /* Info.plist */,
 				EB0CF27B295BCE6A000E96B7 /* Services */,
 				EB0CF26C295BBFC8000E96B7 /* Modules */,
 				EB0CF269295BBAE3000E96B7 /* Redux */,
@@ -103,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF26A295BBAF4000E96B7 /* ReduxFramework.swift */,
+				EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -133,6 +142,8 @@
 			children = (
 				EB0CF282295BDEF0000E96B7 /* Models */,
 				EB0CF271295BC004000E96B7 /* UsersState.swift */,
+				EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */,
+				EB0CF296295CAB42000E96B7 /* UsersActions.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -281,7 +292,9 @@
 				EB0CF291295C9C1D000E96B7 /* Log.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
+				EB0CF299295CAD44000E96B7 /* RESTMiddleware.swift in Sources */,
 				EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */,
+				EB0CF295295CAAFB000E96B7 /* UsersReducer.swift in Sources */,
 				EB0CF25C295BBA92000E96B7 /* ReduxJPApp.swift in Sources */,
 				EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */,
 				EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */,
@@ -290,6 +303,7 @@
 				EB0CF28C295BE2C7000E96B7 /* RESTService.swift in Sources */,
 				EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */,
 				EB0CF284295BDF01000E96B7 /* User.swift in Sources */,
+				EB0CF297295CAB42000E96B7 /* UsersActions.swift in Sources */,
 				EB0CF288295BE108000E96B7 /* RESTServiceable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +436,7 @@
 				DEVELOPMENT_TEAM = Q4X8GBD5XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ReduxJP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -451,7 +465,7 @@
 				DEVELOPMENT_TEAM = Q4X8GBD5XV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ReduxJP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

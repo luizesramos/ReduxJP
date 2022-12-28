@@ -8,6 +8,5 @@
 import Foundation
 
 struct UsersState: ReduxState {
-    var selectedUserID: String? = nil
     var users: [User] = .init()
 }

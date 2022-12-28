@@ -7,7 +7,9 @@
 
 import Foundation
 
+/// Role-defining protocol for application state
 protocol ReduxState {}
+/// Role-defining protocol for user actions
 protocol ReduxAction {}
 
 /// Reducer performs a pure function on state to produce an updated version of that state
@@ -16,6 +18,9 @@ protocol ReduxAction {}
 ///   - action: describes a pure function to be applied on the state
 /// - Returns: an updated version of the state after the action has been applied
 typealias Reducer<State: ReduxState> = (State, ReduxAction) -> State
+
+/// Handler for a `ReduxAction` to be executed after the current `Middleware` operation
+typealias ReduxDispatcher = (ReduxAction) -> Void
 
 /// Middleware performs non-pure operation (e.g., network or DB action) and dispatches an action as a result of the operation
 /// - Parameters:

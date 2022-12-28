@@ -16,25 +16,25 @@ struct Logger {
     let context: String
     
     /// Most verbose. contains activity names, types, variable values, arguments
-    func d(_ message: String) {
-        log(message, for: .debug)
+    func d(_ message: @autoclosure () -> String) {
+        log(message(), for: .debug, symbol: "D")
     }
     /// Typically used to notify state transitions without details or sensitive information
-    func i(_ message: String) {
-        log(message, for: .info)
+    func i(_ message:  @autoclosure () -> String) {
+        log(message(), for: .info, symbol: "I")
     }
     /// Used to notify unexpected scenarios that may disturb execution but don't prevent the app from making progress
-    func w(_ message: String) {
-        log(message, for: .warning)
+    func w(_ message:  @autoclosure () -> String) {
+        log(message(), for: .warning, symbol: "W")
     }
     /// Execution encounters an error and stops progress on the task at hand
-    func e(_ message: String) {
-        log(message, for: .error)
+    func e(_ message:  @autoclosure () -> String) {
+        log(message(), for: .error, symbol: "E")
     }
     
-    private func log(_ message: String, for verbosityLevel: LoggerVerbosity) {
+    private func log(_ message: String, for verbosityLevel: LoggerVerbosity, symbol: String) {
         guard Log.verbosityLevel <= verbosityLevel else { return }
-        debugPrint("\(context)/D: \(message)")
+        debugPrint("\(context)/\(symbol): \(message)")
     }
 }
 

@@ -11,7 +11,7 @@ enum Preview {
     
     static func user(_ id: UInt64, _ name: String) -> User {
         let username = name.lowercased().replacingOccurrences(of: " ", with: "")
-        return User(id: "\(id)",
+        return User(id: id,
                     name: name,
                     username: username,
                     email: "\(username)@a.com",
