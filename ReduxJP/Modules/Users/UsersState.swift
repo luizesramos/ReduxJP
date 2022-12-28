@@ -38,6 +38,6 @@ struct Company: Codable {
 }
 
 struct UsersState: ReduxState {
-    // var simplifies reducer updates
-    var users: [User]
+    var selectedUserID: String? = nil
+    var users: [User] = .init()
 }

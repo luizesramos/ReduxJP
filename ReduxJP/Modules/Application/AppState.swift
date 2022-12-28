@@ -8,6 +8,7 @@
 import Foundation
 
 struct AppState: ReduxState {
-    var usersState: UsersState
-    var todosState: TodosState
+    var albumsState: AlbumsState = .init()
+    var usersState: UsersState = .init()
+    var todosState: TodosState = .init()
 }

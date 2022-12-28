@@ -15,6 +15,9 @@
 		EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF26E295BBFE2000E96B7 /* AppState.swift */; };
 		EB0CF272295BC004000E96B7 /* UsersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF271295BC004000E96B7 /* UsersState.swift */; };
 		EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF273295BC12C000E96B7 /* TodosState.swift */; };
+		EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF276295BC447000E96B7 /* AppReducer.swift */; };
+		EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF279295BC804000E96B7 /* AlbumsState.swift */; };
+		EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF27E295BCF71000E96B7 /* PhotosState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		EB0CF26E295BBFE2000E96B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB0CF271295BC004000E96B7 /* UsersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersState.swift; sourceTree = "<group>"; };
 		EB0CF273295BC12C000E96B7 /* TodosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosState.swift; sourceTree = "<group>"; };
+		EB0CF276295BC447000E96B7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		EB0CF279295BC804000E96B7 /* AlbumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsState.swift; sourceTree = "<group>"; };
+		EB0CF27E295BCF71000E96B7 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		EB0CF25A295BBA92000E96B7 /* ReduxJP */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF27B295BCE6A000E96B7 /* Services */,
 				EB0CF26C295BBFC8000E96B7 /* Modules */,
 				EB0CF269295BBAE3000E96B7 /* Redux */,
 				EB0CF25B295BBA92000E96B7 /* ReduxJPApp.swift */,
@@ -88,7 +95,9 @@
 		EB0CF26C295BBFC8000E96B7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF27D295BCF68000E96B7 /* Photos */,
 				EB0CF26D295BBFD6000E96B7 /* Application */,
+				EB0CF278295BC7E8000E96B7 /* Albums */,
 				EB0CF275295BC131000E96B7 /* Todos */,
 				EB0CF270295BBFF6000E96B7 /* Users */,
 			);
@@ -99,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF26E295BBFE2000E96B7 /* AppState.swift */,
+				EB0CF276295BC447000E96B7 /* AppReducer.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -117,6 +127,37 @@
 				EB0CF273295BC12C000E96B7 /* TodosState.swift */,
 			);
 			path = Todos;
+			sourceTree = "<group>";
+		};
+		EB0CF278295BC7E8000E96B7 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF279295BC804000E96B7 /* AlbumsState.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		EB0CF27B295BCE6A000E96B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF27C295BCE73000E96B7 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EB0CF27C295BCE73000E96B7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EB0CF27D295BCF68000E96B7 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF27E295BCF71000E96B7 /* PhotosState.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,10 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0CF25E295BBA92000E96B7 /* ContentView.swift in Sources */,
+				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
+				EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */,
 				EB0CF25C295BBA92000E96B7 /* ReduxJPApp.swift in Sources */,
 				EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */,
 				EB0CF272295BC004000E96B7 /* UsersState.swift in Sources */,
+				EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */,
 				EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
