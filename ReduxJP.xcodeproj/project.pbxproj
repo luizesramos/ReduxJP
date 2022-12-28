@@ -19,6 +19,12 @@
 		EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF279295BC804000E96B7 /* AlbumsState.swift */; };
 		EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF27E295BCF71000E96B7 /* PhotosState.swift */; };
 		EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF280295BD00E000E96B7 /* NetworkService.swift */; };
+		EB0CF284295BDF01000E96B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF283295BDF01000E96B7 /* User.swift */; };
+		EB0CF288295BE108000E96B7 /* RESTServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF287295BE108000E96B7 /* RESTServiceable.swift */; };
+		EB0CF28C295BE2C7000E96B7 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF28B295BE2C7000E96B7 /* RESTService.swift */; };
+		EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */; };
+		EB0CF291295C9C1D000E96B7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF290295C9C1D000E96B7 /* Log.swift */; };
+		EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		EB0CF279295BC804000E96B7 /* AlbumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsState.swift; sourceTree = "<group>"; };
 		EB0CF27E295BCF71000E96B7 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 		EB0CF280295BD00E000E96B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EB0CF283295BDF01000E96B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB0CF287295BE108000E96B7 /* RESTServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTServiceable.swift; sourceTree = "<group>"; };
+		EB0CF28B295BE2C7000E96B7 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
+		EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelper.swift; sourceTree = "<group>"; };
+		EB0CF290295C9C1D000E96B7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		EB0CF261295BBA93000E96B7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */,
 				EB0CF262295BBA93000E96B7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -118,6 +131,7 @@
 		EB0CF270295BBFF6000E96B7 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF282295BDEF0000E96B7 /* Models */,
 				EB0CF271295BC004000E96B7 /* UsersState.swift */,
 			);
 			path = Users;
@@ -142,7 +156,9 @@
 		EB0CF27B295BCE6A000E96B7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EB0CF28F295C9BFC000E96B7 /* Logger */,
 				EB0CF27C295BCE73000E96B7 /* Networking */,
+				EB0CF28A295BE292000E96B7 /* RESTService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -151,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF280295BD00E000E96B7 /* NetworkService.swift */,
+				EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -161,6 +178,31 @@
 				EB0CF27E295BCF71000E96B7 /* PhotosState.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		EB0CF282295BDEF0000E96B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF283295BDF01000E96B7 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB0CF28A295BE292000E96B7 /* RESTService */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF287295BE108000E96B7 /* RESTServiceable.swift */,
+				EB0CF28B295BE2C7000E96B7 /* RESTService.swift */,
+			);
+			path = RESTService;
+			sourceTree = "<group>";
+		};
+		EB0CF28F295C9BFC000E96B7 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				EB0CF290295C9C1D000E96B7 /* Log.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,14 +277,20 @@
 			files = (
 				EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */,
 				EB0CF25E295BBA92000E96B7 /* ContentView.swift in Sources */,
+				EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */,
+				EB0CF291295C9C1D000E96B7 /* Log.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
 				EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */,
 				EB0CF25C295BBA92000E96B7 /* ReduxJPApp.swift in Sources */,
+				EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */,
 				EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */,
 				EB0CF272295BC004000E96B7 /* UsersState.swift in Sources */,
 				EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */,
+				EB0CF28C295BE2C7000E96B7 /* RESTService.swift in Sources */,
 				EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */,
+				EB0CF284295BDF01000E96B7 /* User.swift in Sources */,
+				EB0CF288295BE108000E96B7 /* RESTServiceable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

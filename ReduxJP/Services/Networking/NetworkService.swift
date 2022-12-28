@@ -7,24 +7,6 @@
 
 import Foundation
 
-protocol NetworkServiceable {
-    func perform<T: Decodable>(request: NetworkRequest) async throws -> T
-}
-
-struct NetworkRequest {
-    let method: HTTPMethod
-    let url: URL
-}
-
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
-enum NetworkError: Error {
-    case badStatus(Int)
-}
-
 final class NetworkService: NetworkServiceable {
     private let session: URLSession
     private let decoder: JSONDecoder
@@ -35,15 +17,22 @@ final class NetworkService: NetworkServiceable {
     }
     
     func perform<T: Decodable>(request: NetworkRequest) async throws -> T {
-        var r = URLRequest(url: request.url)
+        var r = URLRequest(url: request.url,
+                           cachePolicy: request.cachePolicy,
+                           timeoutInterval: request.timeout ?? session.configuration.timeoutIntervalForResource)
         r.httpMethod = request.method.rawValue
+        r.httpBody = request.body
+        Log.network.d("\(r)")
         
         let (data, response) = try await session.data(for: r)
         
         if let httpResponse = response as? HTTPURLResponse {
+            Log.network.d("\(httpResponse)")
             guard httpResponse.statusCode == 200 else {
                 throw NetworkError.badStatus(httpResponse.statusCode)
             }
+        } else {
+            Log.network.d("\(response)")
         }
 
         return try decoder.decode(T.self, from: data)
@@ -52,9 +41,12 @@ final class NetworkService: NetworkServiceable {
 
 private extension URLSessionConfiguration {
     static var tailored: URLSessionConfiguration {
-        var config = URLSessionConfiguration.default
+        let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 5
         config.timeoutIntervalForResource = 15
+        config.httpAdditionalHeaders = [
+            "Content-type": "application/json; charset=UTF-8"
+        ]
         return config
     }
 }
