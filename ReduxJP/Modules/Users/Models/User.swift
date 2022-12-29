@@ -53,5 +53,3 @@ struct Company: Codable {
     let catchPhrase: String
     let bs: String
 }
-
-typealias UsersResponse = [User]

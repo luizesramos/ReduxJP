@@ -33,9 +33,9 @@ struct ContentView: View {
                         Text(item.company.name)
                     }
                 }
-                .navigationDestination(for: User.self) { item in
-                    Text(item.website)
-                }
+            }
+            .navigationDestination(for: User.self) { item in
+                Text(item.website)
             }
             .refreshable {
                 Log.app.i("Refresh users")
@@ -45,7 +45,7 @@ struct ContentView: View {
 //            .toolbar { toolbar }
         }
         .onAppear {
-            
+            props.fetchUsers()
         }
     }
     
