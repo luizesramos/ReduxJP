@@ -31,6 +31,8 @@
 		EB0CF2A2295FAE4E000E96B7 /* AlbumsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A1295FAE4E000E96B7 /* AlbumsActions.swift */; };
 		EB0CF2A4295FB179000E96B7 /* Logger+Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A3295FB179000E96B7 /* Logger+Albums.swift */; };
 		EB0CF2A6295FBEDA000E96B7 /* AlbumPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */; };
+		EBC1F470295FD84900D44295 /* ScrollableLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */; };
+		EBC1F473295FE41200D44295 /* ThumbnailAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		EB0CF2A1295FAE4E000E96B7 /* AlbumsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsActions.swift; sourceTree = "<group>"; };
 		EB0CF2A3295FB179000E96B7 /* Logger+Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Albums.swift"; sourceTree = "<group>"; };
 		EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosView.swift; sourceTree = "<group>"; };
+		EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableLazyVGrid.swift; sourceTree = "<group>"; };
+		EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailAsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				EB0CF27B295BCE6A000E96B7 /* Services */,
 				EB0CF26C295BBFC8000E96B7 /* Modules */,
 				EB0CF269295BBAE3000E96B7 /* Redux */,
+				EBC1F471295FE3C000D44295 /* View */,
 				EB0CF25B295BBA92000E96B7 /* ReduxJPApp.swift */,
 				EB0CF29F295FADCE000E96B7 /* AlbumsView.swift */,
 				EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */,
@@ -201,6 +206,15 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		EBC1F471295FE3C000D44295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */,
+				EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */,
+				EBC1F473295FE41200D44295 /* ThumbnailAsyncImage.swift in Sources */,
 				EB0CF25E295BBA92000E96B7 /* UsersView.swift in Sources */,
 				EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */,
 				EB0CF2A2295FAE4E000E96B7 /* AlbumsActions.swift in Sources */,
@@ -279,6 +294,7 @@
 				EB0CF29C295FACF8000E96B7 /* AlbumsReducer.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF2A0295FADCE000E96B7 /* AlbumsView.swift in Sources */,
+				EBC1F470295FD84900D44295 /* ScrollableLazyVGrid.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
 				EB0CF299295CAD44000E96B7 /* UsersMiddleware.swift in Sources */,
 				EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */,

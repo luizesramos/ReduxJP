@@ -42,7 +42,9 @@ final class RESTService: RESTServiceable {
         }
         
         do {
-            let decoded: T = try await network.perform(request: NetworkRequest(method: .get, url: url))
+            let decoded: T = try await network.perform(request: NetworkRequest(method: .get,
+                                                                               url: url,
+                                                                               cachePolicy: .returnCacheDataElseLoad))
             Log.restService.i("Success fetching item")
             return .success(decoded)
         } catch {

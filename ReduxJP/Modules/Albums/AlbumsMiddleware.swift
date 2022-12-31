@@ -19,6 +19,7 @@ func albumsMiddleware(service: RESTServiceable) -> Middleware<AppState> {{ state
                 dispatch(AlbumFetchFailed())
             }
         }
+        
     case let action as LoadAlbum:
         Task {
             dispatch(UpdateSelectedAlbum(id: action.album.id, selectedAlbumState: .loading))
@@ -31,6 +32,7 @@ func albumsMiddleware(service: RESTServiceable) -> Middleware<AppState> {{ state
                 dispatch(UpdateSelectedAlbum(id: action.album.id, selectedAlbumState: .failure))
             }
         }
+        
     default:
         break
     }

@@ -32,8 +32,8 @@ extension Album: Hashable, Equatable {
 }
 
 struct Photo: Codable {
-    let albumID: UInt64
-    let id: UInt64
+    let albumID: AlbumID
+    let id: PhotoID
     let title: String
     let url: URL
     let thumbnailURL: URL
@@ -73,6 +73,7 @@ enum SelectedAlbumState {
 }
 
 typealias AlbumID = UInt64
+typealias PhotoID = UInt64
 
 struct AlbumsState: ReduxState {
     var viewState: AlbumsViewState = .loading
