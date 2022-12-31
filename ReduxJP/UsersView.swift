@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  UsersView.swift
 //  ReduxJP
 //
 //  Created by Luiz Ramos on 12/27/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct UsersView: View {
     @EnvironmentObject var store: Store<AppState>
     
     private struct Props {
@@ -42,26 +42,14 @@ struct ContentView: View {
                 props.fetchUsers()
             }
             .navigationTitle("Users")
-//            .toolbar { toolbar }
         }
         .onAppear {
             props.fetchUsers()
         }
     }
-    
-//    @ToolbarContentBuilder
-//    var toolbar: some ToolbarContent {
-//        ToolbarItem {
-//            Button(action: {}) {
-//                Image(systemName: "info.circle.fill")
-//                    .resizable()
-//                    .frame(width: 30, height: 30)
-//            }
-//        }
-//    }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
         let usersState = UsersState(users: [
             Preview.user(1,"Arthur Mock"),
@@ -74,7 +62,7 @@ struct ContentView_Previews: PreviewProvider {
         let store = Store<AppState>(state: .init(usersState: usersState),
                                     reducer: appReducer,
                                     midlewares: [])
-        ContentView()
+        UsersView()
             .environmentObject(store)
     }
 }

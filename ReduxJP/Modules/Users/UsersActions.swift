@@ -12,3 +12,7 @@ struct FetchUsers: ReduxAction {}
 struct UpdateUsers: ReduxAction {
     let users: [User]
 }
+
+struct FetchUser: ReduxAction {
+    let id: String
+}

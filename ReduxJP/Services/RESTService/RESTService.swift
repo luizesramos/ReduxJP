@@ -22,15 +22,15 @@ final class RESTService: RESTServiceable {
         await fetch(stringUrl: Constants.Albums.all())
     }
     
-    func fetchPhotos(albumID: String) async -> Result<[Photo], RESTError> {
+    func fetchPhotos(albumID: AlbumID) async -> Result<[Photo], RESTError> {
         await fetch(stringUrl: Constants.Photos.with(albumID: albumID))
     }
     
-    func fetchUser(userID: String) async -> Result<User, RESTError> {
+    func fetchUser(userID: UserID) async -> Result<User, RESTError> {
         await fetch(stringUrl: Constants.Users.with(id: userID))
     }
     
-    func fetchUserTodos(userID: String) async -> Result<[Todo], RESTError> {
+    func fetchUserTodos(userID: UserID) async -> Result<[Todo], RESTError> {
         await fetch(stringUrl: Constants.Todos.with(userID: userID))
     }
     

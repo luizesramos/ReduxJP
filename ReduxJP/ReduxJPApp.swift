@@ -15,13 +15,14 @@ struct ReduxJPApp: App {
     init () {
         restService = RESTService(network: NetworkService())
         self.store = .init(state: AppState(), reducer: appReducer, midlewares: [
-            restMiddleware(service: restService)
+            albumsMiddleware(service: restService),
+            usersMiddleware(service: restService)
         ])
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AlbumsView()
                 .environmentObject(store)
         }
     }

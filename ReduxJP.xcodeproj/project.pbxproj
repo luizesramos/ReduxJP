@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EB0CF25C295BBA92000E96B7 /* ReduxJPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF25B295BBA92000E96B7 /* ReduxJPApp.swift */; };
-		EB0CF25E295BBA92000E96B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF25D295BBA92000E96B7 /* ContentView.swift */; };
+		EB0CF25E295BBA92000E96B7 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF25D295BBA92000E96B7 /* UsersView.swift */; };
 		EB0CF260295BBA93000E96B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0CF25F295BBA93000E96B7 /* Assets.xcassets */; };
 		EB0CF263295BBA93000E96B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0CF262295BBA93000E96B7 /* Preview Assets.xcassets */; };
 		EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF26A295BBAF4000E96B7 /* ReduxFramework.swift */; };
 		EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF26E295BBFE2000E96B7 /* AppState.swift */; };
 		EB0CF272295BC004000E96B7 /* UsersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF271295BC004000E96B7 /* UsersState.swift */; };
-		EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF273295BC12C000E96B7 /* TodosState.swift */; };
 		EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF276295BC447000E96B7 /* AppReducer.swift */; };
 		EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF279295BC804000E96B7 /* AlbumsState.swift */; };
-		EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF27E295BCF71000E96B7 /* PhotosState.swift */; };
 		EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF280295BD00E000E96B7 /* NetworkService.swift */; };
-		EB0CF284295BDF01000E96B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF283295BDF01000E96B7 /* User.swift */; };
 		EB0CF288295BE108000E96B7 /* RESTServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF287295BE108000E96B7 /* RESTServiceable.swift */; };
 		EB0CF28C295BE2C7000E96B7 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF28B295BE2C7000E96B7 /* RESTService.swift */; };
 		EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */; };
@@ -27,24 +24,27 @@
 		EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */; };
 		EB0CF295295CAAFB000E96B7 /* UsersReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */; };
 		EB0CF297295CAB42000E96B7 /* UsersActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF296295CAB42000E96B7 /* UsersActions.swift */; };
-		EB0CF299295CAD44000E96B7 /* RESTMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */; };
+		EB0CF299295CAD44000E96B7 /* UsersMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF298295CAD44000E96B7 /* UsersMiddleware.swift */; };
+		EB0CF29C295FACF8000E96B7 /* AlbumsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF29B295FACF8000E96B7 /* AlbumsReducer.swift */; };
+		EB0CF29E295FAD4F000E96B7 /* AlbumsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF29D295FAD4F000E96B7 /* AlbumsMiddleware.swift */; };
+		EB0CF2A0295FADCE000E96B7 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF29F295FADCE000E96B7 /* AlbumsView.swift */; };
+		EB0CF2A2295FAE4E000E96B7 /* AlbumsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A1295FAE4E000E96B7 /* AlbumsActions.swift */; };
+		EB0CF2A4295FB179000E96B7 /* Logger+Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A3295FB179000E96B7 /* Logger+Albums.swift */; };
+		EB0CF2A6295FBEDA000E96B7 /* AlbumPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB0CF258295BBA92000E96B7 /* ReduxJP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxJP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0CF25B295BBA92000E96B7 /* ReduxJPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxJPApp.swift; sourceTree = "<group>"; };
-		EB0CF25D295BBA92000E96B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EB0CF25D295BBA92000E96B7 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		EB0CF25F295BBA93000E96B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB0CF262295BBA93000E96B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB0CF26A295BBAF4000E96B7 /* ReduxFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxFramework.swift; sourceTree = "<group>"; };
 		EB0CF26E295BBFE2000E96B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB0CF271295BC004000E96B7 /* UsersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersState.swift; sourceTree = "<group>"; };
-		EB0CF273295BC12C000E96B7 /* TodosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosState.swift; sourceTree = "<group>"; };
 		EB0CF276295BC447000E96B7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EB0CF279295BC804000E96B7 /* AlbumsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsState.swift; sourceTree = "<group>"; };
-		EB0CF27E295BCF71000E96B7 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 		EB0CF280295BD00E000E96B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		EB0CF283295BDF01000E96B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB0CF287295BE108000E96B7 /* RESTServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTServiceable.swift; sourceTree = "<group>"; };
 		EB0CF28B295BE2C7000E96B7 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
 		EB0CF28D295C958C000E96B7 /* PreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelper.swift; sourceTree = "<group>"; };
@@ -52,8 +52,14 @@
 		EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceable.swift; sourceTree = "<group>"; };
 		EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersReducer.swift; sourceTree = "<group>"; };
 		EB0CF296295CAB42000E96B7 /* UsersActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersActions.swift; sourceTree = "<group>"; };
-		EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTMiddleware.swift; sourceTree = "<group>"; };
+		EB0CF298295CAD44000E96B7 /* UsersMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMiddleware.swift; sourceTree = "<group>"; };
 		EB0CF29A295CAFDA000E96B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EB0CF29B295FACF8000E96B7 /* AlbumsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsReducer.swift; sourceTree = "<group>"; };
+		EB0CF29D295FAD4F000E96B7 /* AlbumsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsMiddleware.swift; sourceTree = "<group>"; };
+		EB0CF29F295FADCE000E96B7 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		EB0CF2A1295FAE4E000E96B7 /* AlbumsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsActions.swift; sourceTree = "<group>"; };
+		EB0CF2A3295FB179000E96B7 /* Logger+Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Albums.swift"; sourceTree = "<group>"; };
+		EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,9 @@
 				EB0CF26C295BBFC8000E96B7 /* Modules */,
 				EB0CF269295BBAE3000E96B7 /* Redux */,
 				EB0CF25B295BBA92000E96B7 /* ReduxJPApp.swift */,
-				EB0CF25D295BBA92000E96B7 /* ContentView.swift */,
+				EB0CF29F295FADCE000E96B7 /* AlbumsView.swift */,
+				EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */,
+				EB0CF25D295BBA92000E96B7 /* UsersView.swift */,
 				EB0CF25F295BBA93000E96B7 /* Assets.xcassets */,
 				EB0CF261295BBA93000E96B7 /* Preview Content */,
 			);
@@ -111,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF26A295BBAF4000E96B7 /* ReduxFramework.swift */,
-				EB0CF298295CAD44000E96B7 /* RESTMiddleware.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -121,8 +128,6 @@
 			children = (
 				EB0CF26D295BBFD6000E96B7 /* Application */,
 				EB0CF278295BC7E8000E96B7 /* Albums */,
-				EB0CF27D295BCF68000E96B7 /* Photos */,
-				EB0CF275295BC131000E96B7 /* Todos */,
 				EB0CF270295BBFF6000E96B7 /* Users */,
 			);
 			path = Modules;
@@ -140,26 +145,22 @@
 		EB0CF270295BBFF6000E96B7 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				EB0CF282295BDEF0000E96B7 /* Models */,
 				EB0CF271295BC004000E96B7 /* UsersState.swift */,
 				EB0CF294295CAAFB000E96B7 /* UsersReducer.swift */,
 				EB0CF296295CAB42000E96B7 /* UsersActions.swift */,
+				EB0CF298295CAD44000E96B7 /* UsersMiddleware.swift */,
 			);
 			path = Users;
-			sourceTree = "<group>";
-		};
-		EB0CF275295BC131000E96B7 /* Todos */ = {
-			isa = PBXGroup;
-			children = (
-				EB0CF273295BC12C000E96B7 /* TodosState.swift */,
-			);
-			path = Todos;
 			sourceTree = "<group>";
 		};
 		EB0CF278295BC7E8000E96B7 /* Albums */ = {
 			isa = PBXGroup;
 			children = (
 				EB0CF279295BC804000E96B7 /* AlbumsState.swift */,
+				EB0CF29B295FACF8000E96B7 /* AlbumsReducer.swift */,
+				EB0CF29D295FAD4F000E96B7 /* AlbumsMiddleware.swift */,
+				EB0CF2A1295FAE4E000E96B7 /* AlbumsActions.swift */,
+				EB0CF2A3295FB179000E96B7 /* Logger+Albums.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -181,22 +182,6 @@
 				EB0CF292295CA4A1000E96B7 /* NetworkServiceable.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		EB0CF27D295BCF68000E96B7 /* Photos */ = {
-			isa = PBXGroup;
-			children = (
-				EB0CF27E295BCF71000E96B7 /* PhotosState.swift */,
-			);
-			path = Photos;
-			sourceTree = "<group>";
-		};
-		EB0CF282295BDEF0000E96B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				EB0CF283295BDF01000E96B7 /* User.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EB0CF28A295BE292000E96B7 /* RESTService */ = {
@@ -287,24 +272,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0CF281295BD00E000E96B7 /* NetworkService.swift in Sources */,
-				EB0CF25E295BBA92000E96B7 /* ContentView.swift in Sources */,
+				EB0CF25E295BBA92000E96B7 /* UsersView.swift in Sources */,
 				EB0CF293295CA4A1000E96B7 /* NetworkServiceable.swift in Sources */,
+				EB0CF2A2295FAE4E000E96B7 /* AlbumsActions.swift in Sources */,
 				EB0CF291295C9C1D000E96B7 /* Log.swift in Sources */,
+				EB0CF29C295FACF8000E96B7 /* AlbumsReducer.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
+				EB0CF2A0295FADCE000E96B7 /* AlbumsView.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
-				EB0CF299295CAD44000E96B7 /* RESTMiddleware.swift in Sources */,
+				EB0CF299295CAD44000E96B7 /* UsersMiddleware.swift in Sources */,
 				EB0CF277295BC447000E96B7 /* AppReducer.swift in Sources */,
 				EB0CF295295CAAFB000E96B7 /* UsersReducer.swift in Sources */,
 				EB0CF25C295BBA92000E96B7 /* ReduxJPApp.swift in Sources */,
+				EB0CF2A4295FB179000E96B7 /* Logger+Albums.swift in Sources */,
 				EB0CF28E295C958C000E96B7 /* PreviewHelper.swift in Sources */,
 				EB0CF26F295BBFE2000E96B7 /* AppState.swift in Sources */,
 				EB0CF272295BC004000E96B7 /* UsersState.swift in Sources */,
-				EB0CF27F295BCF71000E96B7 /* PhotosState.swift in Sources */,
+				EB0CF2A6295FBEDA000E96B7 /* AlbumPhotosView.swift in Sources */,
 				EB0CF28C295BE2C7000E96B7 /* RESTService.swift in Sources */,
-				EB0CF274295BC12C000E96B7 /* TodosState.swift in Sources */,
-				EB0CF284295BDF01000E96B7 /* User.swift in Sources */,
 				EB0CF297295CAB42000E96B7 /* UsersActions.swift in Sources */,
 				EB0CF288295BE108000E96B7 /* RESTServiceable.swift in Sources */,
+				EB0CF29E295FAD4F000E96B7 /* AlbumsMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
