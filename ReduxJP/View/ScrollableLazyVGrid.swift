@@ -25,13 +25,11 @@ struct ScrollableLazyVGrid<Content: View, T: Hashable>: View {
             let imageSize = config.imageSize(for: g.size)
             
             ScrollView {
-                LazyVGrid(columns: config.gridItemLayout, spacing: config.gridSpacing) {
+                LazyVGrid(columns: config.gridItemLayout) {
                     ForEach(items, id: \.self) { item in
                         content(item, imageSize)
                     }
                 }
-                .padding(4)
-                .animation(.interactiveSpring(dampingFraction: 1, blendDuration: 3), value: config.gridItemLayout.count)
             }
         }
     }
@@ -39,7 +37,7 @@ struct ScrollableLazyVGrid<Content: View, T: Hashable>: View {
 
 struct GridConfiguration {
     let gridSpacing: CGFloat = 4
-    let gridItemsPerRow: Int = 4
+    let gridItemsPerRow: Int = 3
     
     var gridItemLayout: [GridItem] {
         let item = GridItem(.flexible(), spacing: gridSpacing)
