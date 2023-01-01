@@ -26,25 +26,57 @@ struct UsersView: View {
     
     var body: some View {
         NavigationStack {
-            List(props.users, id: \.id) { item in
-                NavigationLink(value: item) {
+            List(props.users, id: \.self) { item in
+                NavigationLink(destination: {
+                    detailsView(user: item)
+                }, label: {
                     VStack(alignment: .leading) {
                         Text(item.name)
                         Text(item.company.name)
                     }
-                }
+                })
             }
-            .navigationDestination(for: User.self) { item in
-                Text(item.website)
-            }
-            .refreshable {
-                Log.app.i("Refresh users")
-                props.fetchUsers()
-            }
+            .listStyle(.plain)
             .navigationTitle("Users")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .refreshable {
+            Log.app.i("Refresh users")
+            props.fetchUsers()
         }
         .onAppear {
             props.fetchUsers()
+        }
+    }
+    
+    @ViewBuilder
+    private func detailsView(user: User) -> some View {
+        VStack (alignment: .leading) {
+            Group {
+                Text("Name: \(user.name)")
+                Text("Username: \(user.username)")
+                Text("Email: \(user.email)")
+                Text("Phone: \(user.phone)")
+                Text("Website: \(user.website)")
+                Text("Address")
+            }
+            .padding(.vertical)
+            
+            Text("\(user.address.description)")
+
+            Spacer()
+        }
+        .navigationTitle("Contact information")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+extension Address: CustomStringConvertible {
+    var description: String {
+        if !suite.isEmpty {
+            return "\(street) \(suite), \(city) \(zipcode)"
+        } else {
+            return "\(street), \(city) \(zipcode)"
         }
     }
 }

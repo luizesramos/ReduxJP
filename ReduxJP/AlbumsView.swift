@@ -91,8 +91,18 @@ struct AlbumsView: View {
     
     @ToolbarContentBuilder
     var toolbar: some ToolbarContent {
-        ToolbarItem {
-            Button("About", action: {})
+        ToolbarItem(placement: .navigationBarTrailing) {
+            NavigationLink("About") {
+                Text("The API for this project is provided by\njsonplaceholder.typicode.com\nAll rights reserved.")
+                    .multilineTextAlignment(.center)
+            }
+        }
+        
+        ToolbarItem(placement: .navigationBarLeading) {
+            NavigationLink("Photographers") {
+                UsersView()
+                    .environmentObject(store)
+            }
         }
     }
 }

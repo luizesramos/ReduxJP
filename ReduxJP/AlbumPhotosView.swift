@@ -45,11 +45,18 @@ struct AlbumPhotosView: View {
         }
         .navigationTitle(item.title)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: User.self) { user in
-            Text(user.name)
+        .navigationDestination(for: User.self) { item in
+            Text(item.name)
         }
         .navigationDestination(for: Photo.self) { item in
-            Text(item.title)
+            GeometryReader { g in
+                VStack {
+                    Text(item.title)
+                    ScrollView([.vertical, .horizontal], showsIndicators: true) {
+                        PhotoAsyncImage(url: item.url, size: g.size)
+                    }
+                }
+            }
         }
         .onAppear {
             props.loadAlbum()

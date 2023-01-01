@@ -33,6 +33,7 @@
 		EB0CF2A6295FBEDA000E96B7 /* AlbumPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */; };
 		EBC1F470295FD84900D44295 /* ScrollableLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */; };
 		EBC1F473295FE41200D44295 /* ThumbnailAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */; };
+		EBC1F47529620BB600D44295 /* PhotoAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1F47429620BB600D44295 /* PhotoAsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		EB0CF2A5295FBEDA000E96B7 /* AlbumPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosView.swift; sourceTree = "<group>"; };
 		EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableLazyVGrid.swift; sourceTree = "<group>"; };
 		EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailAsyncImage.swift; sourceTree = "<group>"; };
+		EBC1F47429620BB600D44295 /* PhotoAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			children = (
 				EBC1F46F295FD84900D44295 /* ScrollableLazyVGrid.swift */,
 				EBC1F472295FE41200D44295 /* ThumbnailAsyncImage.swift */,
+				EBC1F47429620BB600D44295 /* PhotoAsyncImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				EB0CF29C295FACF8000E96B7 /* AlbumsReducer.swift in Sources */,
 				EB0CF27A295BC804000E96B7 /* AlbumsState.swift in Sources */,
 				EB0CF2A0295FADCE000E96B7 /* AlbumsView.swift in Sources */,
+				EBC1F47529620BB600D44295 /* PhotoAsyncImage.swift in Sources */,
 				EBC1F470295FD84900D44295 /* ScrollableLazyVGrid.swift in Sources */,
 				EB0CF26B295BBAF4000E96B7 /* ReduxFramework.swift in Sources */,
 				EB0CF299295CAD44000E96B7 /* UsersMiddleware.swift in Sources */,
